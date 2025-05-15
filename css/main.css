@@ -1,0 +1,89 @@
+/* Fonts */
+@font-face {
+  font-family: "GolosText";
+  src: url(/fonts/GolosText-VariableFont_wght.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+/* Variables */
+:root {
+    --c_t: #fff;
+    --coontainer-width: 1000px;
+    --container-offset: 15px;
+}
+
+/* Base parametres */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}   
+
+html {
+  font-family: Golos Text;
+  font-size: 16px;
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,h2,h3 {
+  font-family: Golos Text;
+}
+
+  /* CSS settings */
+.container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #f1f1f1;
+    padding: 0 var(--container-offset);
+    max-width: calc(var(--coontainer-width) + (var(--container-offset) * 2));
+}
+
+
+.wrp1 { 
+    display: block;
+  /* text-align: center; */
+  width: 100%;
+  /* margin: 20px auto; */
+  background: #fff;
+  /* border-radius: .8em; */
+  box-shadow:  0px 1px 1px rgba(15, 43, 93, 0.25),  0px 0px 1px 1px rgba(6, 31, 74, 0.13);
+}
+
+.wrap_menun {
+    display: block;
+    position: relative;
+    text-align: left;
+    background: #a0a0a0;
+    max-width: fit-content;
+    }    
+.Ttl,.opt {
+    /* text-align: center; */
+  padding: .5em 0;
+}
+
+/* Menu settings */
+
+ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+li {
+     list-style-type: none;
+     cursor: pointer;
+}
+
+.menu {
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+
