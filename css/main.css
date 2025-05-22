@@ -135,7 +135,8 @@ main {
 }
 
 .wrap_menu {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     position: relative;
     /* background: #a0a0a0; */
     max-width: fit-content;
@@ -144,12 +145,9 @@ main {
   padding: .5em 0;
 }
 
-.menu_1-toggle {
-  visibility: visible;
-    opacity: 1;
-}
 
-  
+
+
 
 /* Menu settings */
 
@@ -261,4 +259,70 @@ main {
 
 
 
+/* Hamburger button */
 
+.menu_1-tog {
+    visibility: visible;
+    opacity: 1;
+}
+
+.warp_hamburger {
+  display: block;
+ 
+  
+  
+}
+.menu_1-tog .hamburger_menu {
+  display: block;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 171, 76);
+  border-radius: 50%;
+  border: #531fad solid 4px;
+  box-shadow: 1px 1px 10px 0  #000000;
+}
+
+.menu_1-tog .hamburger_menu .hamburger {
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 5px;
+  top: 28px;
+  left: 12px;
+  border-radius: 3px;
+  background-color: #fff;
+   transition: 0.4s ease;
+}
+.menu_1-tog .hamburger_menu .hamburger:after, .hamburger_menu .hamburger:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #fff;
+   transition: 0.4s ease;
+}
+
+.menu_1-tog .hamburger_menu .hamburger:after{
+  bottom: -10px;
+}
+
+.menu_1-tog .hamburger_menu .hamburger:before {
+  top: -10px;
+}
+
+
+[id='menu_1-toggle']:checked ~ .wrap_menu > .warp_hamburger > .menu_1-tog > .hamburger_menu > .hamburger {
+  transform: rotate(45deg);
+}
+
+[id='menu_1-toggle']:checked ~ .wrap_menu > .warp_hamburger > .menu_1-tog > .hamburger_menu > .hamburger:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+[id='menu_1-toggle']:checked ~ .wrap_menu > .warp_hamburger > .menu_1-tog > .hamburger_menu > .hamburger:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
